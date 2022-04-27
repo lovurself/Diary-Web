@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/font.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://unpkg.com/typeit@8.4.0/dist/index.umd.js"></script>
+    <script src="https://kit.fontawesome.com/913e1645fa.js"></script>
+    <title>Diary Web</title>
+  </head>
+  <body>
+    <div class="greetings">
+      <h2 class="greeting">
+        <span>안녕하세요! 반가워요 </span>
+        <span>당신의 이름은 무엇인가요?</span>
+      </h2>
+      <form class="login_form">
+        <input
+          autofocus
+          required
+          maxlength="15"
+          type="text"
+          placeholder="이름을 입력하세요."
+        />
+        <button>Enter</button>
+      </form>
+      <h2 id="welcomeGreeting" class="hidden"></h2>
+    </div>
+
+    <header>
+      <div class="inner">
+        <h1 class="logo">Diary Web</h1>
+        <h2 id="clock">
+          <span class="today"></span>
+          <span class="time"></span>
+        </h2>
+        <div id="weather">
+          <div class="icon_box">
+            <img class="hidden" data-icon="Clouds" src="images/clouds.png" />
+            <img class="hidden" data-icon="Fog" src="images/fog.png" />
+            <img class="hidden" data-icon="Sand" src="images/fog.png" />
+
+            <img class="hidden" data-icon="Mist" src="images/fog.png" />
+            <img class="hidden" data-icon="Smoke" src="images/fog.png" />
+            <img class="hidden" data-icon="Haze" src="images/fog.png" />
+            <img class="hidden" data-icon="Dust" src="images/fog.png" />
+
+            <img class="hidden" data-icon="Rain" src="images/rain.png" />
+            <img class="hidden" data-icon="Drizzle" src="images/rain.png" />
+
+            <img class="hidden" data-icon="Snow" src="images/snow.png" />
+            <img class="hidden" data-icon="Clear" src="images/clear.png" />
+            <img
+              class="hidden"
+              data-icon="Thunderstorm"
+              src="images/thunderStorm.png"
+            />
+          </div>
+          <span class="weather"></span>
+          <span class="temp"></span>
+          <span class="city"></span>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="inner">
+        <section id="left_contents">
+          <h4 class="quotes"></h4>
+          <div class="profile">
+            <div class="img"></div>
+            <h4 class="name"></h4>
+            <form class="introduce">
+              <input
+                required
+                maxlength="50"
+                type="text"
+                placeholder="자신을 소개하는 글을 써보세요."
+              />
+            </form>
+            <div class="introduce_txt">
+              <p class="intro"></p>
+              <i class="fas fa-edit"></i>
+            </div>
+          </div>
+        </section>
+
+        <section id="center_contents">
+          <div class="daily_planner">
+            <form class="todo_form">
+              <input
+                required
+                maxlength="20"
+                type="text"
+                placeholder="오늘의 할일은?"
+              />
+              <button>Enter</button>
+            </form>
+            <ul class="todo_list"></ul>
+          </div>
+        </section>
+
+        <section id="right_contents">
+          <div class="juke_box">
+            <!-- music 자료 -->
+            <audio id="music"></audio>
+
+            <!-- music 정보 -->
+            <div class="music_info_box">
+              <div class="music_info">
+                <h1 class="music_name"></h1>
+                <span class="artist"></span>
+
+                <!-- music 길이 -->
+                <div class="music_length">
+                  <input type="range" value="0" class="music_bar" />
+                  <span class="current_time"></span>
+                  <span class="music_duration">00:00</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- music controls -->
+            <div class="controls">
+              <button class="btn backward_btn">
+                <i class="fas fa-backward"></i>
+              </button>
+              <button class="play_btn pause">
+                <span> </span>
+                <span></span>
+              </button>
+              <button class="btn forward_btn">
+                <i class="fas fa-forward"></i>
+              </button>
+            </div>
+
+            <p>
+              <span
+                >모든 음악은 방탄소년단 사운드클라우드 채널에서 들을 수
+                있어요.</span
+              >
+              <span>해당 페이지로 수익창출을 하지 않아요.</span>
+            </p>
+          </div>
+
+          <div class="bookMark">
+            <a href="#">Google</a>
+            <a href="#">Youtube</a>
+            <a href="#">Naver</a>
+            <a href="#">열공모드 BLOG</a>
+            <a href="#">My Github</a>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- js -->
+    <script src="js/greetings.js"></script>
+    <script src="js/clock.js"></script>
+    <script src="js/weather.js"></script>
+    <script src="js/quotes.js"></script>
+    <script src="js/profile.js"></script>
+    <script src="js/todoList.js"></script>
+    <script src="js/musicData.js"></script>
+    <script src="js/jukeBox.js"></script>
+  </body>
+</html>

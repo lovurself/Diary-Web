@@ -1,0 +1,208 @@
+a {
+  text-decoration: none;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.greetings {
+  width: 100%;
+  height: 937px;
+  background-color: #D9D7F1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  z-index: 50;
+}
+
+.greetings .greeting {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: 'SDSamliphopangche_Outline';
+  font-size: 3rem;
+}
+
+.greetings .greeting span {
+  margin-bottom: 20px;
+}
+
+.greetings .login_form {
+  width: 20%;
+  margin-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.greetings .login_form input {
+  outline: none;
+  border: none;
+  background-color: transparent;
+  width: 75%;
+  border-bottom: 1px solid #FFFDDE;
+  padding-bottom: 5px;
+  font-family: 'LeeSeoyun';
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.greetings .login_form button {
+  outline: none;
+  border: none;
+  width: 20%;
+  height: 40px;
+  border-radius: 15px;
+  background-color: #FFFDDE;
+  cursor: pointer;
+  font-family: 'LeeSeoyun';
+  font-size: 1.3rem;
+  color: lightslategrey;
+}
+
+.greetings .login_form button:hover {
+  background-color: #fffaaf;
+}
+
+.greetings .login_form button:active {
+  background-color: #fdf68b;
+}
+
+.greetings #welcomeGreeting {
+  font-family: 'SDSamliphopangche_Outline';
+  font-size: 3rem;
+}
+
+.greetings #welcomeGreeting .ti-cursor {
+  display: none;
+}
+
+header {
+  position: fixed;
+  width: 100%;
+  height: 100px;
+}
+
+header .inner {
+  width: 1400px;
+  height: 100%;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+header .inner .logo {
+  font-family: 'Yeongdo-Rg';
+  font-size: 2.5rem;
+}
+
+header .inner #clock {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: 'Daheng';
+}
+
+header .inner #clock .today {
+  font-size: 1.5rem;
+}
+
+header .inner #clock .time {
+  font-size: 2.5rem;
+}
+
+header .inner #weather {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: 'Daheng';
+  font-size: 1.7rem;
+}
+
+header .inner #weather .icon_box img {
+  width: 40px;
+  height: 40px;
+}
+
+header .inner #weather span {
+  display: inline-block;
+  margin-left: 15px;
+}
+
+main {
+  width: 100%;
+  height: 937px;
+  background: url(../images/white_background.png) center no-repeat;
+  background-size: 100% auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+main .inner {
+  width: 1880px;
+  height: 837px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+main .inner #left_contents {
+  width: 30%;
+  height: 100%;
+}
