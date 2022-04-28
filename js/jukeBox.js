@@ -3,26 +3,23 @@ let currentMusic = 0;
 const music = document.querySelector("#music");
 
 // music 정보
-const musicBar = document.querySelector(".music_bar");
-const musicName = document.querySelector(".music_name");
-const artist = document.querySelector(".artist");
+const musicBar = document.querySelector('.music_bar');
+const musicName = document.querySelector('.music_name');
+const artist = document.querySelector('.artist');
 
 // 재생시간
-const currentTime = document.querySelector(".current_time");
-const musicDuration = document.querySelector(".music_duration");
+const currentTime = document.querySelector('.current_time');
+const musicDuration = document.querySelector('.music_duration');
 
 // controls
-const playBtn = document.querySelector(".play_btn");
-const forwardBtn = document.querySelector(".forward_btn");
-const backwardBtn = document.querySelector(".backward_btn");
+const play = document.querySelector('.play');
+const playBtn = document.querySelector('.play_btn');
+const pauseBtn = document.querySelector('.pause_btn');
+const forwardBtn = document.querySelector('.forward_btn');
+const backwardBtn = document.querySelector('.backward_btn');
 
-playBtn.addEventListener("click", () => {
-  if (playBtn.className.includes("pause")) {
-    music.play();
-  } else {
-    music.pause();
-  }
-  playBtn.classList.toggle("pause");
+play.addEventListener('click', () => {
+  playMusic();
 });
 
 // setup music
@@ -35,7 +32,7 @@ const setMusic = (i) => {
   musicName.innerHTML = song.name;
   artist.innerHTML = song.artist;
 
-  currentTime.innerHTML = `00:00`;
+  currentTime.innerHTML = `00 : 00`;
 
   setTimeout(() => {
     musicBar.max = music.duration;
@@ -45,11 +42,11 @@ const setMusic = (i) => {
 
 setMusic(0);
 
-// 
-function formatTime(time) {
+// 재생 길이
+const formatTime = time => {
   let min = Math.floor(time / 60);
   let sec = Math.floor(time % 60);
-  return (min < 10 ? "0" + min : min) + ":" + (sec < 10 ? "0" + sec : sec);
+  return `${min < 10 ? '0' + min : min} : ${sec < 10 ? '0' + sec : sec}`;
 }
 
 // music bar
@@ -61,17 +58,25 @@ setInterval(() => {
   }
 }, 500);
 
-musicBar.addEventListener("change", () => {
+musicBar.addEventListener('change', () => {
   music.currentTime = musicBar.value;
 });
 
 const playMusic = () => {
-  music.play();
-  playBtn.classList.remove("pause");
+  if (play.className.includes('pause')) {
+    playBtn.classList.add('hidden');
+    pauseBtn.classList.remove('hidden');
+    music.play();
+  } else {
+    playBtn.classList.remove('hidden');
+    pauseBtn.classList.add('hidden');
+    music.pause();
+  }
+  play.classList.toggle('pause');
 };
 
 // controls
-forwardBtn.addEventListener("click", () => {
+forwardBtn.addEventListener('click', () => {
   if (currentMusic >= songs.length - 1) {
     currentMusic = 0;
   } else {
@@ -81,7 +86,7 @@ forwardBtn.addEventListener("click", () => {
   playMusic();
 });
 
-backwardBtn.addEventListener("click", () => {
+backwardBtn.addEventListener('click', () => {
   if (currentMusic <= 0) {
     currentMusic = songs.length - 1;
   } else {

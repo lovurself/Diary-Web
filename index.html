@@ -69,27 +69,36 @@
     <main>
       <div class="inner">
         <section id="left_contents">
-          <h4 class="quotes"></h4>
+          <div class="quote_box">
+            <h4>- 오늘의 명언 -</h4>
+            <p class="quotes"></p>
+          </div>
           <div class="profile">
-            <div class="img"></div>
-            <h4 class="name"></h4>
-            <form class="introduce">
-              <input
-                required
-                maxlength="50"
-                type="text"
-                placeholder="자신을 소개하는 글을 써보세요."
-              />
-            </form>
-            <div class="introduce_txt">
-              <p class="intro"></p>
-              <i class="fas fa-edit"></i>
+            <div class="border_box">
+              <div class="img_box"></div>
+              <h4 class="name"></h4>
+              <form class="introduce" id="introduce">
+                <textarea
+                  name="input"
+                  required
+                  maxlength="150"
+                  form="introduce"
+                  wrap="soft"
+                  placeholder="자신을 소개글을 적어보세요."
+                ></textarea>
+                <input type="submit" value="Enter" />
+              </form>
+              <div class="introduce_txt hidden">
+                <p class="intro"></p>
+                <img src="images/edit_icon.png" alt="자기소개 수정하기 버튼" />
+              </div>
             </div>
           </div>
         </section>
 
         <section id="center_contents">
           <div class="daily_planner">
+            <h3 class="todo_title">daily planner</h3>
             <form class="todo_form">
               <input
                 required
@@ -109,35 +118,44 @@
             <audio id="music"></audio>
 
             <!-- music 정보 -->
-            <div class="music_info_box">
-              <div class="music_info">
-                <h1 class="music_name"></h1>
-                <span class="artist"></span>
+            <div class="music_box">
+              <h1 class="music_name"></h1>
 
-                <!-- music 길이 -->
-                <div class="music_length">
-                  <input type="range" value="0" class="music_bar" />
+              <!-- music controls -->
+              <div class="controls">
+                <button class="btn backward_btn">
+                  <img src="images/backward_btn.png" alt="이전 음악" />
+                </button>
+                <button class="play pause">
+                  <span class="play_btn">
+                    <img src="images/play_btn.png" alt="재생" />
+                  </span>
+                  <span class="pause_btn hidden">
+                    <img src="images/pause_btn.png" alt="일시 정지" />
+                  </span>
+                </button>
+                <button class="btn forward_btn">
+                  <img src="images/forward_btn.png" alt="다음 음악" />
+                </button>
+              </div>
+
+              <!-- music 길이 -->
+              <div class="music_length">
+                <input type="range" value="0" class="music_bar" />
+                <div class="music_timer">
                   <span class="current_time"></span>
-                  <span class="music_duration">00:00</span>
+                  <span class="music_duration"></span>
                 </div>
               </div>
+
+              <span class="artist"></span>
             </div>
 
-            <!-- music controls -->
-            <div class="controls">
-              <button class="btn backward_btn">
-                <i class="fas fa-backward"></i>
-              </button>
-              <button class="play_btn pause">
-                <span> </span>
-                <span></span>
-              </button>
-              <button class="btn forward_btn">
-                <i class="fas fa-forward"></i>
-              </button>
-            </div>
-
-            <p>
+            <p class="copyright">
+              <a href="https://soundcloud.com/bangtan" target="_blank">
+                <i class="fab fa-soundcloud"></i>
+                BTS soundcloud로 궈궈
+              </a>
               <span
                 >모든 음악은 방탄소년단 사운드클라우드 채널에서 들을 수
                 있어요.</span
@@ -146,12 +164,16 @@
             </p>
           </div>
 
-          <div class="bookMark">
-            <a href="#">Google</a>
-            <a href="#">Youtube</a>
-            <a href="#">Naver</a>
-            <a href="#">열공모드 BLOG</a>
-            <a href="#">My Github</a>
+          <div class="book_mark">
+            <a href="https://www.google.co.kr/webhp?tab=rw" target="_blank"
+              >Google</a
+            >
+            <a href="https://www.youtube.com/" target="_blank">Youtube</a>
+            <a href="https://www.naver.com/" target="_blank">Naver</a>
+            <a href="https://lovurself.github.io/" target="_blank"
+              >열공모드 BLOG</a
+            >
+            <a href="https://github.com/lovurself" target="_blank">My Github</a>
           </div>
         </section>
       </div>

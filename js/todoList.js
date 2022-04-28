@@ -12,19 +12,32 @@ const saveTodos = () => {
 const plusTodo = (newTodoObj) => {
     const todoItem = document.createElement('li');
     todoItem.id = newTodoObj.id;
+    const todoDone = document.createElement('span');
     const todoItemText = document.createElement('span');
     const removeTodo = document.createElement('i');
-    removeTodo.innerText = "X";
+    removeTodo.classList.add("fas", "fa-trash-alt")
     removeTodo.addEventListener('click', (e) => {
         const li = e.target.parentElement;
         todos = todos.filter(todo => todo.id !== parseInt(li.id));
         li.remove();
         saveTodos(); // localStorage의 데이터를 새롭게 저장
     })
+    todoItem.appendChild(todoDone);
     todoItem.appendChild(todoItemText); // appendChild는 부모 노드의 마지막 자식 노드 다음에 넣어줄 것을 지정
     todoItem.appendChild(removeTodo);
     todoItemText.innerText = newTodoObj.text;
     todoList.appendChild(todoItem);
+
+    // todo Done
+    const checkedBtn = document.createElement('i');
+    checkedBtn.classList.add('fas', 'fa-check');
+    todoDone.appendChild(checkedBtn);
+
+    const onTodoDone = (e) => {
+        e.preventDefault();
+        todoDone.classList.toggle('done');
+    }
+    todoDone.addEventListener('click', onTodoDone);
 }
 
 const todoSubmit = e => {

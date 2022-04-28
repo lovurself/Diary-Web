@@ -6,7 +6,7 @@ let songs = [
     },
     {
         name: 'Snow Flower (feat.Peakboy)',
-        path: 'music/V - Snow Flower (feat.Peakboy).mp3',
+        path: 'music/V - Snow Flower (feat. Peakboy).mp3',
         artist: 'V of BTS'
     },
     {

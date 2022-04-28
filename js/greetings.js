@@ -13,12 +13,15 @@ const USERNAME_KEY = "username";
 const paintGreetings = (username) => {
     welcomeGreeting.innerText = `어서와요! ${username}님`;
     welcomeGreeting.classList.remove(HIDDEN_CLASSNAME);
+    // welcomeGreeting 글자 타이핑 효과
+    new TypeIt("#welcomeGreeting", {
+    }).go();
 
     setTimeout(() => {
         greetingsPage.classList.add(HIDDEN_CLASSNAME);
     }, 3000);
 
-    name.innerText = `${username}`;
+    name.innerText = `${username} 님`;
 }
 
 const onLoginSubmit = (e) => {
@@ -40,7 +43,3 @@ if (savedUsername === null) {
     greeting.classList.add(HIDDEN_CLASSNAME);
     paintGreetings(savedUsername);
 }
-
-// welcomeGreeting 글자 타이핑 효과
-new TypeIt("#welcomeGreeting", {
-  }).go();

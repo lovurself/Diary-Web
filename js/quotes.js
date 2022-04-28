@@ -7,3 +7,14 @@ fetch(url)
 
     quotes.innerText = `" ${quote.slip.advice} "`;
 });
+
+const quoteBgArr = [
+    "#FFF56D",
+    "#9FB4FF",
+    "#99FFCD",
+    "#FFD36E",
+    "#FFA8A8"
+];
+
+const quoteBox = document.querySelector('.quote_box');
+quoteBox.style.backgroundColor = quoteBgArr[Math.floor(Math.random() * quoteBgArr.length)];

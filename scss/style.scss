@@ -152,15 +152,15 @@ header {
 main {
     width: 100%;
     height: 937px;
-    background: url(../images/white_background.png) center no-repeat;
+    background: url(../images/white_background.png) center;
     background-size: 100% auto;
 
     display: flex;
     align-items: flex-end;
 
     .inner {
-        width: 1880px;
-        height: 837px;
+        width: 1800px;
+        height: 820px;
         margin: 0 auto;
 
         display: flex;
@@ -168,10 +168,371 @@ main {
         align-items: flex-end;
 
         #left_contents {
-            width: 30%;
+            width: 25%;
             height: 100%;
 
-            
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            font-family: 'LeeSeoyun';
+
+            .quote_box {
+                width: 70%;
+                padding: 30px;
+                box-sizing: border-box;
+                box-shadow: 2px 2px 5px rgba(0,0,0,0.15);
+                text-align: center;
+
+                margin-bottom: 25px;
+
+                h4 {
+                    font-size: 1.2rem;
+                    margin-bottom: 10px;
+                }
+            }
+
+            .profile {
+                width: 80%;
+                height: 80%;
+                background-color: #D9D7F1;
+                border-radius: 25px;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .border_box {
+                    width: 90%;
+                    height: 95%;
+                    border: 4px solid #fff;
+                    border-radius: 20px;
+                    box-sizing: border-box;
+
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+
+                    .img_box {
+                        width: 210px;
+                        height: 210px;
+                        border-radius: 50%;
+                        background-color: #fff;
+                        overflow: hidden;
+
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+    
+                        img {
+                            width: 110%;
+                            height: auto;
+                            transform: translate(-3px, 2px);
+                        }
+                    }
+    
+                    .name {
+                        margin-top: 20px;
+                        font-size: 1.5rem;
+                    }
+    
+                    .introduce {
+                        width: 90%;
+                        height: 230px;
+                        margin-top: 30px;
+
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+    
+                        textarea {
+                            width: 263px;
+                            height: 200px;
+                            
+                            outline: none;
+                            border: none;
+                            border-radius: 30px;
+                            padding: 20px 30px;
+                            margin-bottom: 7px;
+                            box-sizing: border-box;
+
+                            font-family: 'LeeSeoyun';
+                            font-size: 1.1rem;
+                            text-align: center;
+                            overflow: hidden;
+                        }
+
+                        input[type="submit"] {
+                            width: 250px;
+                            height: 30px;
+                            outline: none;
+                            border: none;
+                            border-radius: 30px;
+
+                            font-family: 'LeeSeoyun';
+                            font-size: 1.1rem;
+
+                            cursor: pointer;
+                        }
+                    }
+    
+                    .introduce_txt {
+                        width: 90%;
+                        height: 230px;
+                        margin-top: 30px;
+
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        align-items: center;
+
+                        .intro {
+                            display: block;
+                            width: 263px;
+                            height: 200px;
+                            
+                            outline: none;
+                            border: none;
+                            border-radius: 30px;
+                            padding: 20px 30px;
+                            margin-bottom: 10px;
+                            box-sizing: border-box;
+                            background-color: #fff;
+
+                            font-family: 'LeeSeoyun';
+                            font-size: 1.1rem;
+                            text-align: center;
+                            overflow: hidden;
+                        }
+
+                        img {
+                            width: 30px;
+
+                            cursor: pointer;
+                        }
+                    }
+                }                
+            }
+        }
+
+        #center_contents {
+            width: 40%;
+            height: 100%;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .daily_planner {
+                width: 100%;
+                height: 95%;
+                background-color: #82A284;
+
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                .todo_title {
+                    font-family: 'LeferiPoint-BlackObliqueA';
+                    font-size: 3.5rem;
+                    margin: 70px 0 50px;
+                }
+
+                .todo_form {
+                    width: 55%;
+
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    input {
+                        width: 80%;
+                        outline: none;
+                        background-color: transparent;
+                        border: none;
+                        border-bottom: 1px solid #222;
+
+                        font-family: 'LeeSeoyun';
+                        font-size: 1.5rem;
+                        text-align: center;
+                        padding-bottom: 5px;
+                    }
+
+                    button {
+                        width: 70px;
+                        height: 35px;
+                        background-color: #E9EFC0;
+
+                        outline: none;
+                        border: none;
+                        border-radius: 20px;
+
+                        font-family: 'LeeSeoyun';
+                        font-size: 1.2rem;
+
+                        cursor: pointer;
+                    }
+                }
+
+                .todo_list {
+                    width: 80%;
+                    height: 450px;
+                    margin-top: 50px;
+                    padding: 30px 40px;
+                    box-sizing: border-box;
+                    border: 5px solid #E9EFC0;
+                    overflow: auto;
+
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+
+                    font-family: 'LeeSeoyun';
+                    font-size: 1.7rem;
+
+                    li {
+                        width: 80%;
+                        margin-bottom: 15px;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+
+                        span:nth-child(1) {
+                            width: 30px;
+                            height: 30px;
+                            border-radius: 50%;
+                            border: 2px solid #FFFDDE;
+                            
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+
+                            cursor: pointer;
+                            transition: all .3s;
+
+                            i {
+                                opacity: 0;
+                            }
+
+                            &.done {
+                                background-color: #FFFDDE;
+                                i {
+                                    opacity: 1;
+                                    font-size: 1.2rem;
+                                    color: #82A284;
+                                }
+
+                                & + span {
+                                    text-decoration: line-through;
+                                    color: #555;
+                                }
+                            }
+                        }
+
+                        i {
+                            font-size: 1.2rem;
+                            color: #FFA8A8;
+                            cursor: pointer;
+                            opacity: 0;
+
+                            &:hover {
+                                color: #FFCBCB;
+                            }
+                            &:active {
+                                color: #85586F;
+                            }
+                        }
+
+                        &:hover {
+                            i:nth-child(3) {
+                                transition: all .3s;
+                                opacity: 1;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        #right_contents {
+            width: 25%;
+            height: 100%;
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+            .juke_box {
+                width: 90%;
+                height: 300px;
+                background-color: #DAE5D0;
+                overflow: hidden;
+                margin-bottom: 25px;
+
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                align-items: center;
+
+                .music_box {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+
+                    .controls {
+                        button {
+                            width: 50px;
+                            height: 50px;
+        
+                            background-color: transparent;
+                            border: none;
+                            outline: none;
+        
+                            img {
+                                width: 100%;
+                                height: auto;
+                            }
+    
+                            &:nth-of-type(2) {
+                                img {
+                                    width: 90%;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .copyright {
+                    width: 85%;
+                    padding-bottom: 20px;
+                    box-sizing: border-box;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    text-align: center;
+
+                    font-family: 'Daheng';
+
+                    a {                    
+                        font-size: 1.3rem;
+                        color: #E8630A;
+                        margin-bottom: 5px;
+
+                        i {
+                            vertical-align: middle;
+                            margin-right: 5px;
+                        }
+                    }
+                }
+            }
+
+            .book_mark {
+                width: 90%;
+                height: 400px;
+                background-color: #F9D371;
+            }
         }
     }
 }
