@@ -3,11 +3,12 @@ let currentMusic = 0;
 const music = document.querySelector("#music");
 
 // music 정보
-const musicBar = document.querySelector('.music_bar');
+const coverImg = document.querySelector('.cover_img');
 const musicName = document.querySelector('.music_name');
 const artist = document.querySelector('.artist');
 
 // 재생시간
+const musicBar = document.querySelector('.music_bar');
 const currentTime = document.querySelector('.current_time');
 const musicDuration = document.querySelector('.music_duration');
 
@@ -29,6 +30,8 @@ const setMusic = (i) => {
   currentMusic = i;
   music.src = song.path;
 
+  coverImg.style.background = `url(${song.cover}) center no-repeat`;
+  coverImg.style.backgroundSize = '100% auto';
   musicName.innerHTML = song.name;
   artist.innerHTML = song.artist;
 
